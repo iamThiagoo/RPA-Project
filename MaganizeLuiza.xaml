@@ -1,0 +1,152 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Carrefour" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="item_buscado" Type="InArgument(x:String)" />
+    <x:Property Name="magazine_data_table" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1740,1176</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="496,1111" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://www.magazineluiza.com.br/" Name="magazine_url" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Amazon.com.br | Tudo pra você, de A a Z." sap:VirtualizedContainerService.HintSize="434,989" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="56b6f907-3527-4f30-ad8f-e52f3ec5389b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,763" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT input-search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="56b6f907-3527-4f30-ad8f-e52f3ec5389b" Text="[item_buscado]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.magazineluiza.com.br/" DesignTimeRectangle="840, 174, 556, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT input-search'" FullSelectorArgument="&lt;webctrl id='input-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-search' tag='INPUT' type='search' class='sc-hjjlnc cfgksK' aaname='Procure no magalu' /&gt;" Guid="695e705a-ca25-4b83-be28-a1de68b7541b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjAAAAAUCAYAAACTUwdmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMGSURBVHhe7dtNjtQwEIZh7n+DvkC2LKJes0mfIUvECmlmww2CXf4rVxw7w/QAGb2P1ILIfxVv/MmBLxsAAMDFhADz86v8AQAAcAXcwAAAgMshwAAAgMshwAAAgMspAWadt9vttv9Ny/Yau3xKL8s2ufec1/hsjdqfSdaatuUlPgMAgKY6wOzCyuu2TC7E3P/G6f2PxNAwTa3gsG5zDHIEGAAA/g/ffw0DjIswj6kEmMYBu951wCkHvvxM8JG5cntjns5YzfedHku1Vh0wYvA6MVd+p8fs5jRv7/fkPss6ev5+rfXas6uz2jNZT43dtaXnsJd6Xdm/z34jBgDAwLcfp25gjg7YoASYcHCXEGCe5RPV7I7lSD3LHHptaTu+9QgBotQRglGaOwaIHCrss5HfyQUG8/5+nXmtg8So1ro9rp1qjeGlvFdsT/0JMAAADO0DjDswW798iL4pwGi9tpb94a2VNSNdlw1KXqPuTLWtd93H1+Dn6ddS1+r/btaReg7WdqpQQoABAOCU4Sek6kahG2D8gwpB1VyjEBCEm5Q4vtO/F2Dah3wjWCT6nVz91Y2RrNGuvVmrzHUmPIU58/jm/hJgAAA4Mgww1aHaOIx3YcKTfvFw7oSApISBdPj3+39YgJF+oQa/Rli/rqVbq8zVCzChrx+fglJVb6Ov3gMCDAAAwckAEw/l6oANmgEmkRsZP3b8eakOK/vDW+sFmLKm0qg7M20huPj1GwFlWKv/u1lH6lG1mT0mwAAA8HbnPiHlsBAO1RxE5MBN7fuQUo21wSIf1nZcePa3FH8UYNL43G6fDRNgQp26/z7A9GqV2vI+pnYVYPQepLWaAcbWHeogwAAAcOYf8doDU/dzbau/FUiHbAo0B2PL55fwywHFjJvXfujoBxivBAv5HcwjdmPtzYd5HtZarx3+G3UJLVJ7Gu/3R/Yzrm9rqdZyc/i+BBgAAFSAwceQEKJuXQAAwLsRYJ7K3t40bosAAMC7EWCezX6KI7wAAPB0BBgAAHA5BBgAAHAx2/Ybxl+oH54hNbAAAAAASUVORK5CYII=" InformativeScreenshot="3eb76cb854d0aeb4d2c71bb506361185.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Magazine Luiza | Pra você é Magalu!' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Up" DisplayName="Click 'Bem-vindo :)'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="56b6f907-3527-4f30-ad8f-e52f3ec5389b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.magazineluiza.com.br/" DesignTimeRectangle="1395, 171, 21, 22" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='search-container' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='search-container' tag='svg' type='' class='sc-dkrFOg dQJKma' aaname='' /&gt;" Guid="60434e3f-c6cb-4b2e-b3b0-9b89964c1c0d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAaCAYAAABCfffNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVEhL7ZMxTkJBEEC9Ad5AboA30CN4A7kBR9DKTq3sJFpYklBgR6HRzsZoZ2Xs6LCzHP7LnwkEZnaX8IMNL9mEDLvz/s7M7skW2EnW4v8l0z+R81eR44dq44VI+0ak+yjy9KMbCgklJNq/qpOzDiqB/WYhK8WVvE/mgrMXDSrITdgbazCDKznS8ly/aWAJyti6rPd8/2owwYqEQxzu3GoggA/wbuqxIqEcHD4daSCgdB+EEkqWYvhV7yvpi9sT6k3jqX0EN0By96GBBK6EOpOA9+GJSMz/TFkJroTENJ5EPEAe5HNVxvtPkZNBHWcRT93WcCXAYeptCRcXN7DbHvbzolBiMNKMK0lZDAaQ2PqCiAcckZXkMBGDEok2lkBO1IgEUiPdmASsX8s0KonYSdZiCxKRGSn/uAK6RqcWAAAAAElFTkSuQmCC" InformativeScreenshot="c6d904522afde46ba4139c4d8e24dfaa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Magazine Luiza | Pra você é Magalu!' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1441, 168, 109, 14" ElementType="Text" FriendlyName="'Bem-vindo :)'" FullSelectorArgument="&lt;webctrl aaname='Bem-vindo :)' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Bem-vindo :)' parentid='__next' tag='DIV' type='' class='sc-hLBbgP kyQkxO sc-gfQywf jyOhsI' check:innerText='Bem-vindo :)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAASCAYAAABsHjEkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM/SURBVGhD7Vgxa9tQEPZfMfgPBPIHasgS8JJR4CGYTKZDMJ1CN3cpJpNH48GgDgZlCChDQVkCyhCwB4MyBJQhg4YMGjJoyPD17t2TJdmvrdpAa7V68IV775505/ve3TulQQM1Kg/jYo1qwbhYo1owLv5VtM99xHEI59Ssr7EFESb3KI4kRjDro1nc/EdgzUN2AP5ns96MAbyYHQ8wMep/gmMXUeThbN+g232IICRG8Gc27LmHUAWEAvlx64EdxRtJbBxSDBIKgYueUb/TEEFIzALQnHE20G+6OJKNnTEWz/QjebxmWTq45shFWNyERLno/NkYfsQTGs8+RgdrYxla9L5X0lPQLJ53KRN4/3KMT+qd5M2U1qeBksNVgIT3k5XwciAVotWHw4HnQeU3emFB/4b9M7iPqb8J4rsxDlPba1hwnkifkI887zjKh2Da3ti38xChSOIeRnccgDQTe3BVhGMs5ja8B9ZFcI9TEkmzcimDF7SDBwX6qw3nTmbRpZUay6GpbdLdRySnhyaYNtfvzJOYPPlwZlQhFC/ip3UhJ0XZvgq0bda1MVmJ/0U/ehs+UPatYsSPDgZq3obzSBsfbLQL+3YeImzdiTTi2yH2WP/eUwFKaK72f5A5kyMBj+GpJkSXtNiToJzKvvh6kBoroKkJWpw3MFqyRAS0soORJ1HJ9Iz4yfaasB9YDmHTM8VyOqG/NIgcIWMIn7P02UM/Z98EZft1IZlZHYiwzoquBavbx/hWAhl+odKiydgcTE5pEjUZMnTGH9hkkQ+HI8/poJcjccNWnsQTXZrvJ+qZLb9+ALGt/asORJDg5JxPieNApJm4nBDBTLKF3kkPR+/S0leCxOMhbG6aFIa6edDl6yVR92k4l7uoHInZwftuJlJZlO76FzOx2iTq7nTmwH9Slw81NnyfZXdicMXdq4+IPkE4kKVJzAwWYF3Kvca23a6slSXx7Xci7Vvm70Rtu9rlNDeoo4tuxrDUKSd0RvDy3d7KRn99f/0+ieuuNNfalyVRGhPt0wt1p+oxnUWtQYnuVB/OtDutemNTg0CfGHxHV/YTo8Y/8LH/30P9243Kaseg230YF2tUC8bFGpVBA98A+qd3LPWJe7UAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[magazine_data_table]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='produto_nome' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='produto_url' ReferenceName='Column3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='produto_preco' ReferenceName='Column1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='produto_avaliacoes' ReferenceName='Column2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column3' attr2='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="56b6f907-3527-4f30-ad8f-e52f3ec5389b" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="971, 465, 984, 9001" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;ul' tag='UL' /&gt;" Guid="45beac88-4609-49c3-8921-07eaeb362586" InformativeScreenshot="6d36eb387800f36f23f44664b7625626.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='notebook acer em Promoção no Magazine Luiza' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" InformativeScreenshot="0346409a93b22e0c18a77407bcb7804e.jpg" Selector="&lt;html app='chrome.exe' title='Amazon.com.br | Tudo pra você, de A a Z.' /&gt;" Url="[magazine_url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
